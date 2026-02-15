@@ -1,0 +1,20 @@
+# YOLOFoodCal Application Configuration
+app:
+  name: YOLOFoodCal
+  version: 0.1.0
+  debug: false
+
+ui:
+  theme: light
+  show_confidence: true
+  show_nutrition: true
+  overlay_alpha: 0.4
+
+output:
+  save_images: true
+  save_json: true
+  output_dir: outputs
+
+device:
+  prefer: cuda  # cuda, cpu, mps
+  fallback: cpu

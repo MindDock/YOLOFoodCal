@@ -1,0 +1,25 @@
+# YOLOFoodCal Model Configuration
+model:
+  name: yolo26n-seg
+  path: models/yolo26n-seg.pt
+  imgsz: 640
+  conf_threshold: 0.25
+  iou_threshold: 0.45
+  max_det: 10
+
+segmentation:
+  enable: true
+  mask_resolution: 160
+
+classes:
+  # Food category mapping (COCO + custom)
+  # Model will be fine-tuned on food dataset
+  pretrained_on: coco
+  
+nutrition:
+  data_path: data/nutrition_table.json
+  default_portion_grams: 100
+  portion_multiplier:
+    small: 0.5
+    medium: 1.0
+    large: 1.5
